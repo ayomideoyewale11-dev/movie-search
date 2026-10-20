@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="/js/movie.js"></script>
+
+    <title>MovieSearch</title>
+  </head>
+
+  <body>
+    <nav class="first-nav">
+      <img
+        src="/imgs/How to Create Media, Abstract, Colorful Logo Graphics in Adobe Illustrator Tutorial.jpg "
+        class="logo"
+      />
+      <h3 class="sitename">MovieSearch</h3>
+      <p class="genre-bar" onclick="window.location.href = 'genre.html'">
+        Choose Genre
+      </p>
+      <p
+        class="watchlist-text"
+        onclick="window.location.href = 'watchlist.html'"
+      >
+        Watchlist
+      </p>
+      <img src="/imgs/download.jpg" class="profile" />
+    </nav>
+    <p class="phrase">Discover. Watch. Love.</p>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for movies, actors or genres..."
+      />
+      <button class="search-btn">Search</button>
+      <div id="autocomplete-container" class="autocomplete"></div>
+    </div>
+
+    <div id="spinner"></div>
+    <div id="movies"></div>
+    <!-- <div id="movie-details"></div> -->
+  </body>
+</html>

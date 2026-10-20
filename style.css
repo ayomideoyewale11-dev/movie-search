@@ -1,0 +1,734 @@
+body {
+  background-color: white;
+  /* text-align: center; */
+}
+.first-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  max-width: 100%;
+  max-height: 5rem;
+  position: relative;
+  border-radius: 0.5%;
+  margin-bottom: 0%;
+}
+#genre-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 90%;
+  height: 2rem;
+  position: relative;
+  left: 4%;
+  border-radius: 2%;
+  gap: 2rem;
+  font-size: 1.4rem;
+}
+.genre-bar {
+  font-size: 1.6rem;
+  position: relative;
+  left: 25%;
+  border-right: 0.1rem solid black;
+  padding-right: 1rem;
+}
+li:active {
+  color: gray;
+}
+.logo {
+  max-height: 3.5rem;
+  position: relative;
+  right: 32.5%;
+}
+.sitename {
+  font-size: 2.5rem;
+  color: black;
+  position: relative;
+  right: 32.5%;
+}
+.profile {
+  max-height: 3.5rem;
+  position: relative;
+  left: 29%;
+}
+.watchlist-text {
+  position: relative;
+  left: 26%;
+  font-size: 1.6rem;
+}
+.watchlist-text:hover {
+  cursor: pointer;
+}
+.watchlist-text:active {
+  color: gray;
+  cursor: pointer;
+}
+.phrase {
+  text-align: center;
+  font-size: 1.9rem;
+}
+#search-input {
+  position: relative;
+  left: 31.5%;
+  width: 35%;
+  height: 3rem;
+  outline: none;
+  border: 0.2rem solid black;
+  font-size: 1.5rem;
+  padding-left: 2%;
+}
+.search-btn {
+  position: relative;
+  left: 31.1%;
+  top: auto;
+  width: 8%;
+  height: 4.5rem;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+}
+
+#spinner {
+  display: none;
+  border: 0.2rem solid #f3f3f3;
+  border-top: 0.2rem solid black;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: spin 1s linear infinite;
+  margin-top: 5%;
+  position: relative;
+  left: 45%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#genre-navbar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+#genre-navbar button {
+  padding: 8px 14px;
+  border: none;
+  background: #444;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#genre-navbar button:hover {
+  background: #666;
+}
+
+/* Javascript */
+#movies {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, 0.5fr);
+  gap: 3rem;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 1rem;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+}
+.no-results {
+  position: relative;
+  left: 125%;
+  font-size: 25px;
+}
+.warning-img {
+  position: relative;
+  left: 150%;
+  width: 20%;
+}
+.poster {
+  width: 100%;
+  margin-top: 5%;
+  height: 50rem;
+  /* height: 300px; /* fixed height */
+  object-fit: cover; /* keeps aspect ratio, crops if needed */
+  border-radius: 4px;
+}
+.movie-card {
+  background: #fff;
+  /* padding: 10px; */
+  border-radius: 6px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  overflow: hidden; /* prevents text from spilling out */
+}
+
+.movie-title {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  word-wrap: break-word; /* prevents long titles from breaking layout */
+  text-align: center;
+}
+.movie-rating {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  word-wrap: break-word; /* prevents long titles from breaking layout */
+  text-align: center;
+}
+
+/* Movie Details*/
+.movie-info {
+  max-width: 50%;
+  margin: 20px auto;
+  text-align: left;
+}
+/*
+.movie-info img {
+  width: 40%;
+  height: 30rem;
+  border-radius: 6px;
+  position: relative;
+  left: 30%;   
+}*/
+.movie-poster-title {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center them horizontally */
+  justify-content: center;
+  text-align: center; /* center text inside the container */
+  max-width: 50%; /* optional: limit width for readability */
+  margin: 0 auto;
+  /* background-color: blue; */
+  /* width: 50%;
+  text-align: center; */
+}
+.detail-poster {
+  width: 90%; /* adjust size as needed */
+  border-radius: 8px;
+  margin-bottom: 1rem; /* space between image and title */
+  margin-top: 10%;
+}
+.detail-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+/*.movie-info h2 {
+  font-size: 2.5rem;
+  position: relative;
+  left: 27%;
+}  */
+.movie-info p {
+  font-size: 2rem;
+  word-wrap: break-word;
+}
+.back-btn {
+  width: 9%;
+  height: 5rem;
+  text-align: center;
+  border: none;
+  background-color: black;
+  color: white;
+  position: relative;
+  left: 5%;
+  font-size: 1.5rem;
+}
+.back-btn:active {
+  background-color: white;
+  color: black;
+}
+.add-to-watchlist {
+  width: 11%;
+  height: 5rem;
+  position: relative;
+  left: 75%;
+  font-size: 1.5rem;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.add-to-watchlist:active {
+  background-color: white;
+  color: black;
+}
+.detail-type {
+  text-transform: capitalize;
+}
+.btn-nav {
+  display: flex;
+}
+
+/* watchlist*/
+.watchlist-title {
+  text-align: center;
+  position: relative;
+  right: 5%;
+}
+#watchlist-container {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+  width: 100%;
+}
+.watchlist-empty {
+  text-align: center;
+  position: relative;
+  left: 100%;
+  margin-top: 20%;
+  font-size: 2rem;
+}
+.watchlist-poster-info {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center them horizontally */
+  justify-content: center;
+  text-align: center; /* center text inside the container */
+  max-width: 50%; /* optional: limit width for readability */
+  margin: 0 auto;
+}
+.watchlist-img {
+  width: 90%; /* adjust size as needed */
+  height: 20rem;
+  border-radius: 8px;
+  margin-bottom: 0.1rem; /* space between image and title */
+  margin-top: 10%;
+}
+.watch-con {
+  /*  background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-search-btn {
+  position: relative;
+  right: 35%;
+  border: 1rem solid black;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.genre-back-btn {
+  border: 1rem solid black;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-top: 10%;
+}
+.remove-btn {
+  color: white;
+  background-color: black;
+  height: 2rem;
+}
+.movie-card-link {
+  text-decoration: none;
+  color: black;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete {
+  position: absolute;
+  top: 100%; /* directly under input */
+  margin-top: 0.5rem;
+  width: 45%;
+  left: 31.5%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  z-index: 1000; /* ensures it hovers over genre bar */
+  display: none; /* hidden by default */
+}
+
+.autocomplete div {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 0.1rem solid grey;
+}
+
+.autocomplete div:hover {
+  background: #f0f0f0;
+}
+#genre-results {
+  display: grid;
+  grid-template-columns: repeat(3, 0.5fr);
+}
+#pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+.previous {
+  width: 7%;
+  height: 5rem;
+  background-color: black;
+  color: white;
+}
+.next {
+  width: 7%;
+  height: 5rem;
+  background-color: black;
+  color: white;
+}
+.genre-detail {
+  text-decoration: none;
+  color: black;
+}
+#genre-nav li.selected {
+  /* background-color: grey; /* or any highlight color */
+  color: yellow; /* optional: change text color */
+}
+.genre-movie-card {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center; /* center them horizontally */
+  justify-content: center;
+  text-align: center; /* center text inside the container */
+  max-width: 50%; /* optional: limit width for readability */
+  margin: 0 auto;
+}
+.genre-poster {
+  width: 90%; /* adjust size as needed */
+  height: 20rem;
+  border-radius: 8px;
+  margin-bottom: 0.1rem; /* space between image and title */
+  margin-top: 10%;
+}
+.genre-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  color: #111;
+}
+
+.first-nav {
+  min-height: 4rem;
+  max-height: none;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.logo,
+.sitename,
+.profile,
+.genre-bar,
+.watchlist-text {
+  position: static;
+}
+
+.logo,
+.profile {
+  width: auto;
+  max-height: 3rem;
+}
+
+.sitename {
+  margin: 0 auto 0 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.genre-bar,
+.watchlist-text {
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.genre-bar {
+  border-right: 0.1rem solid black;
+  padding-right: 1rem;
+}
+
+.phrase {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+}
+
+.search-container {
+  display: flex;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+#search-input {
+  position: static;
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  height: 3.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+}
+
+.search-btn {
+  position: static;
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 6rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.autocomplete {
+  left: 0;
+  width: 100%;
+}
+
+#spinner {
+  margin: 3rem auto;
+  left: auto;
+}
+
+#movies,
+#genre-results,
+#watchlist-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 80rem;
+  margin: 2rem auto;
+}
+
+#movies {
+  position: static;
+}
+
+.movie-card,
+.genre-card,
+.watchlist-movie-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.poster,
+.genre-poster,
+.watchlist-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.movie-title,
+.movie-rating {
+  font-size: 1rem;
+}
+
+.no-results,
+.watchlist-empty {
+  position: static;
+  grid-column: 1 / -1;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.warning-img {
+  position: static;
+  width: min(20rem, 100%);
+}
+
+.movie-info {
+  max-width: 48rem;
+  margin: 2rem auto;
+}
+
+.movie-poster-title {
+  max-width: 100%;
+}
+
+.detail-poster {
+  width: min(22rem, 100%);
+  margin: 0 auto 1rem;
+}
+
+.movie-info p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.btn-nav {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.back-btn,
+.add-to-watchlist {
+  position: static;
+  width: auto;
+  min-height: 3rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.watch-con {
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 80rem;
+  margin: 1rem auto;
+}
+
+.watchlist-title {
+  position: static;
+  margin: 0;
+}
+
+.back-search-btn,
+.genre-back-btn {
+  position: static;
+  display: inline-block;
+  border-width: 0.75rem;
+  margin: 0;
+}
+
+.watchlist-poster-info,
+.genre-movie-card {
+  max-width: 100%;
+}
+
+.remove-btn {
+  max-width: 100%;
+  height: auto;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+#genre-nav {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+#genre-nav li {
+  cursor: pointer;
+}
+
+#pagination {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem auto;
+}
+
+#pagination button {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  #movies,
+  #genre-results,
+  #watchlist-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .first-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .sitename {
+    margin-right: auto;
+  }
+
+  .profile {
+    display: none;
+  }
+
+  .genre-bar {
+    padding-right: 0.75rem;
+  }
+
+  .search-btn {
+    min-width: 5rem;
+    padding: 0 0.75rem;
+  }
+
+  #movies,
+  #genre-results,
+  #watchlist-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .movie-title,
+  .movie-rating {
+    font-size: 0.9rem;
+  }
+
+  .watch-con {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .watchlist-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-nav {
+    align-items: stretch;
+  }
+
+  .back-btn,
+  .add-to-watchlist {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #genre-nav {
+    gap: 0.5rem 0.75rem;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
